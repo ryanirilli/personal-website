@@ -11,6 +11,11 @@
     "ember-resolver": "~0.1.18",
     "jquery": "^1.11.3",
     "loader.js": "ember-cli/loader.js#3.2.1",
-    "qunit": "~1.18.0"
+    "qunit": "~1.18.0",
+    "inuit-starter-kit": "~0.2.9",
+    "inuit-widths-responsive": "~0.2.2",
+    "inuit-spacing-responsive": "~0.0.8",
+    "inuit-layout": "~0.3.2",
+    "inuit-list-block": "~0.4.2"
   }
 }

@@ -1,0 +1,29 @@
+.hero {
+  padding: 20px;
+  line-height: 1.3;
+}
+
+.hero--huge {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @include media-query(palm) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.hero--bg-cool {
+  background: blue;
+  color: white;
+  @include gradient(#BEEB9F, #96C575);
+}
+
+.hero-bg-mountains {
+  background-image: url('/images/mountains.jpeg');
+  color: white;
+}
+
+.hero__title {
+  position: relative;
+  z-index: 1;
+}

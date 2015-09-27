@@ -1,0 +1,20 @@
+.tint {
+  position: relative;
+  &:after {
+    content: '';
+    @extend .absolute-fill;
+  }
+}
+
+.tint--green {
+  &:after {
+    background: rgba(0,163,136,0.8);
+  }
+}
+
+.tint--red {
+  &:after {
+    background: rgba(255,97,56,0.2);
+
+  }
+}

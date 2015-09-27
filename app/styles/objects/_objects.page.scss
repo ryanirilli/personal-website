@@ -1,0 +1,17 @@
+.page {
+  transition: transform 0.4s, opacity 1s;
+}
+
+.page--menu-open {
+  transform: translate($main-menu-width,0);
+  opacity: 0.5;
+}
+
+.page-top-nav {
+  background: white;
+  color: black;
+  z-index: 2;
+}
+
+.page__footer {
+}

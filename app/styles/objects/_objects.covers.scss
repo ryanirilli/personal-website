@@ -1,0 +1,37 @@
+.cover {
+  background-size: cover;
+}
+
+.cover--fixed {
+  background-attachment: fixed;
+}
+
+.cover--sf {
+  background-image: url('/images/sf.jpeg');
+  color: white;
+}
+
+.cover--mbp {
+  background-image: url('/images/mbp.jpg');
+  color: white;
+}
+
+.cover--desktop {
+  background-image: url('/images/desktop.jpeg');
+  color: white;
+}
+
+.cover--himalaya {
+  background-image: url('/images/himalaya.jpeg');
+  color: white;
+}
+
+.cover--pooch {
+  background-image: url('/images/pooch.jpeg');
+  color: white;
+}
+
+.cover--fox {
+  background-image: url('/images/fox.jpeg');
+  color: white;
+}

@@ -1,0 +1,17 @@
+.height-1\/1 {
+  height: 100vh;
+}
+
+.height-1\/2 {
+  height: 50vh;
+}
+
+.height-2\/3 {
+  height: 66.6666vh;
+}
+
+.palm-height-1\/2 {
+  @include media-query(palm) {
+    height: 50vh;
+  }
+}

@@ -1,0 +1,26 @@
+.main-menu {
+  position: fixed;
+  height: 100vh;
+  width: $main-menu-width;
+  transition: transform 0.4s;
+  transform: translate(-($main-menu-width),0);
+  background: $main-menu-bg;
+  z-index: 3;
+  border-top: 15px solid rgba(0,0,0,0.7);
+}
+
+.main-menu--showing {
+  transform: translate(0%,0);
+}
+
+.main-menu__item {
+  @extend .text-center;
+  cursor: pointer;
+  background: transparent;
+  font-weight: 100;
+  color: rgba(255,255,255,0.6);
+  &:hover {
+    color: rgba(255,255,255,0.9);
+    background: rgba(0,0,0,0.1);
+  }
+}

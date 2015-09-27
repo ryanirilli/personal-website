@@ -1,0 +1,15 @@
+$border-color--main: #ccc;
+
+.border {
+  border-color: transparent;
+  border-width: 1px;
+}
+
+.border--b {
+  border-bottom-color: $border-color--main;
+  border-bottom-style: solid;
+}
+
+.border--dotted {
+  border-style: dotted;
+}
