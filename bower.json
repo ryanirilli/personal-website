@@ -16,6 +16,7 @@
     "inuit-widths-responsive": "~0.2.2",
     "inuit-spacing-responsive": "~0.0.8",
     "inuit-layout": "~0.3.2",
-    "inuit-list-block": "~0.4.2"
+    "inuit-list-block": "~0.4.2",
+    "waypoints": "~4.0.0"
   }
 }
