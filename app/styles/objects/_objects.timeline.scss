@@ -3,9 +3,11 @@ $timeline-outer-circle-size: 14px !default;
 $timeline-inner-circle-size: $timeline-outer-circle-size - 4 !default;
 $timeline-outer-circle-color: $timeline-border-color !default;
 $timeline-inner-circle-color: rgba(255,255,255,0.7) !default;
-$timeline-content-bg-color: rgba(0,0,0,0.02);
-$timeline-content-arrow-size: 36px;
-$timeline-link-color: $timeline-border-color;
+$timeline-content-bg-color: rgba(0,0,0,0.02) !default;
+$timeline-content-arrow-size: 36px !default;
+$timeline-link-color: $timeline-border-color !default;
+$timeline-item-active-content-bg-color: #E1F4FF !default;
+$timeline-item-active-outer-circle-color: #00A388 !default;
 
 .timeline {
   @extend .list-block;
@@ -42,6 +44,7 @@ $timeline-link-color: $timeline-border-color;
     left: -($timeline-outer-circle-size/2);
     border-radius: $timeline-outer-circle-size/2;
     background: $timeline-outer-circle-color;
+    transition: background 0.5s, transform 0.5s;
   }
   &:before {
     top: ($timeline-outer-circle-size - $timeline-inner-circle-size)/2;
@@ -51,6 +54,18 @@ $timeline-link-color: $timeline-border-color;
     border-radius: $timeline-inner-circle-size/2;
     background: $timeline-inner-circle-color;
     z-index: 1;
+  }
+  &.timeline__item--active {
+    &:after {
+      background: $timeline-item-active-outer-circle-color;
+      transform: scale(1.7);
+    }
+    .timeline__content {
+      background-color: $timeline-item-active-content-bg-color;
+      &:after {
+        @include arrow(left, $timeline-content-arrow-size, $timeline-item-active-content-bg-color, 'flush-top');
+      }
+    }
   }
 }
 

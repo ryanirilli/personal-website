@@ -12,7 +12,6 @@
 @import "../../bower_components/inuit-tools-widths/tools.widths";
 @import "tools/tools.arrows";
 @import "tools/tools.gradients";
-@import "tools/tools.serrated";
 @import "tools/tools.transitions";
 @import "../../bower_components/inuit-mixins/tools.mixins";
 @import "../../bower_components/inuit-normalize/generic.normalize";
@@ -26,16 +25,17 @@
 @import "objects/objects.main-menu";
 @import "objects/objects.page";
 @import "objects/objects.sections";
-@import "objects/objects.serrated";
 @import "objects/objects.timeline";
 @import "../../bower_components/inuit-widths/trumps.widths";
 @import "../../bower_components/inuit-widths-responsive/trumps.widths-responsive";
 @import "../../bower_components/inuit-spacing/trumps.spacing";
 @import "../../bower_components/inuit-spacing-responsive/trumps.spacing-responsive";
+@import "trumps/trumps.animation";
 @import "trumps/trumps.borders";
 @import "trumps/trumps.heights";
 @import "trumps/trumps.image-fx";
 @import "trumps/trumps.links";
+@import "trumps/trumps.opacity";
 @import "trumps/trumps.positioning";
 @import "trumps/trumps.text";
 @import "trumps/trumps.tints";
