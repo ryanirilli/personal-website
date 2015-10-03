@@ -18,9 +18,17 @@
   cursor: pointer;
   background: transparent;
   font-weight: 100;
-  color: rgba(255,255,255,0.6);
-  &:hover {
-    color: rgba(255,255,255,0.9);
-    background: rgba(0,0,0,0.1);
+  a {
+    @extend .p-;
+    display: block;
+    color: white;
+    & {
+      color: rgba(255,255,255,0.6);
+    }
+    text-decoration: none;
+    &:hover {
+      color: rgba(255,255,255,0.9);
+      background: rgba(0,0,0,0.1);
+    }
   }
 }

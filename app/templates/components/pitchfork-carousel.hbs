@@ -1,0 +1,51 @@
+<div class="pf-carousel">
+    <div class="pf-dates">
+        <div class="pf-date pf-date--active">
+            <div class="pf-date__month">Sep</div>
+            <div class="pf-date__day">28</div>
+        </div>
+        <div class="pf-date">
+            <div class="pf-date__month">Sep</div>
+            <div class="pf-date__day">25</div>
+        </div>
+        <div class="pf-date">
+            <div class="pf-date__month">Sep</div>
+            <div class="pf-date__day">24</div>
+        </div>
+        <div class="pf-date">
+            <div class="pf-date__month">Sep</div>
+            <div class="pf-date__day">23</div>
+        </div>
+        <div class="pf-date">
+            <div class="pf-date__month">Sep</div>
+            <div class="pf-date__day">22</div>
+        </div>
+    </div>
+    <div class="pf-albums">
+      {{#each content.albums as |album|}}
+          <div class="pf-album {{if album.isOpen 'pf-album--open'}} {{if album.isActive 'pf-album--active'}}" {{action 'toggleCover' album on="mouseEnter"}} {{action 'toggleCover' album on="mouseLeave"}}>
+              <div class="pf-album__img-container">
+                <img class="pf-album__img u-1/1" src="{{album.imageUrl}}">
+              </div>
+              <div class="pf-album__content layout layout--rev">
+                  <div class="u-2/3">
+                      <div class="ph pl+">
+                          <h2 class="mb0">{{album.artist}}</h2>
+                          <h4 class="mt0">{{album.albumName}}</h4>
+                          <p>
+                              {{{album.description}}}
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      {{/each}}
+    </div>
+    <div class="pf-thumbs">
+        {{#each content.albums as |album|}}
+            <div class="pf-thumb {{if album.isActive 'pf-thumb--active'}}" {{action 'setActiveAlbum' album on="mouseEnter"}}>
+                <img src={{album.thumbUrl}} />
+            </div>
+        {{/each}}
+    </div>
+</div>

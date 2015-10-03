@@ -1,13 +1,17 @@
 <div class="main-menu {{if isMenuOpen 'main-menu--showing'}}">
-    <ul class="list-block list-block--small mt">
+    <ul class="list-bare mt">
         <li class="main-menu__item">
-            Case Studies
+            {{#link-to 'experiments'}}Experiments{{/link-to}}
         </li>
         <li class="main-menu__item">
-            Twitter
+            <a href="https://twitter.com/ryanirilli">
+                Twitter
+            </a>
         </li>
         <li class="main-menu__item">
-            Github
+            <a href="https://github.com/ryanirilli">
+                Github
+            </a>
         </li>
         <li class="main-menu__item">
             Blog
@@ -22,13 +26,13 @@
     <i class="icon-menu link link--main" {{action 'toggleMenu' bubbles=false}}></i>
 </div>
 
-<div class="page {{if isMenuOpen 'page--menu-open'}}" {{action 'closeMenu'}}>
+<div class="page pt {{if isMenuOpen 'page--menu-open'}}" {{action 'closeMenu'}}>
     <div class="page__content">
       {{outlet}}
     </div>
-    <div class="page__footer">
-        <div class="height-1/1">
-
-        </div>
+    <div class="page__footer cover cover--forest cover--fixed">
+      <div class="pv++"></div>
+      <div class="pv++"></div>
+      <div class="pv++"></div>
     </div>
 </div>

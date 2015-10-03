@@ -1,0 +1,31 @@
+<div class="section p">
+  <h1 class="pb">Rebuilding Pitchfork's Album Carousel</h1>
+  <img src="images/experiments/rebuilding-pitchforks-album-carousel/existing_carousel.jpg" class="u-1/1" />
+  <div class="pt+">
+      <p>
+          <strong class="text-highlight">This is a nice carousel</strong> and I'm a frequent visitor to Pitchfork. Most of the time I'm looking for new songs or albums
+          I haven't heard of or keep up with music news. One of the features I use a lot is this damn carousel.
+          I've been using it for years now. I Feel like Bill Murray in Groundhog Day with this thing. Get my morning coffee, eat a banana, go to Pitchfork,
+          cycle through the albums, repeat. Like I said, it's a nice carousel but it just hasn't changed in forever, so I decided it's time
+          for me to take a crack at reinventing it.
+      </p>
+      <p>
+          First, in order to figure out what to change, I wanted to understand the requirements. Pitchfork publishes
+          5 reviews every weekday. the layout shows the current day's reviews with the first album active. the detail view
+          shows the album artwork and album info. The info contains the artist name, album name, author name and
+          an excerpt from the review. Below the detail view is thumbnails of each album. Hovering over one triggers
+          a transition, making it the active album. There are 5 tabs on the right for the last 5 days of reviews. Clicking a tab activates
+          that day replacing, the thumbnails and detail view.
+      </p>
+      <ul class="list-bare">
+          <li>width: 600px</li>
+          <li>height: 443px</li>
+      </ul>
+  </div>
+  {{#link-to 'experiments.rebuilding-pitchforks-album-carousel.demo'}}Demo{{/link-to}}
+
+  <div class="mv+">
+    {{outlet}}
+  </div>
+
+</div>

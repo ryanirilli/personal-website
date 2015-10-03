@@ -17,6 +17,8 @@
     "inuit-spacing-responsive": "~0.0.8",
     "inuit-layout": "~0.3.2",
     "inuit-list-block": "~0.4.2",
-    "waypoints": "~4.0.0"
+    "waypoints": "~4.0.0",
+    "inuit-list-bare": "~0.3.0",
+    "oridomi": "~1.1.5"
   }
 }

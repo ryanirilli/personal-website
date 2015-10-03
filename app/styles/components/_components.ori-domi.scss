@@ -1,0 +1,150 @@
+$pf-carousel-width:        600px !default;
+$pf-carousel-height:       443px !default;
+$pf-album-size:            $pf-carousel-height !default;
+$pf-border-style:          1px solid #e6e6e6;
+$pf-brand-color:           #ef4135;
+
+
+.pf-carousel {
+  width: $pf-carousel-width;
+  height: $pf-carousel-height;
+  background: rgba(0,0,0,0.03);
+  overflow: hidden;
+  position: relative;
+  border: $pf-border-style;
+}
+
+.pf-album {
+  position: absolute;
+  height: $pf-album-size;
+  width: $pf-album-size;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f2f2+0,ffffff+100 */
+  background: rgb(242,242,242); /* Old browsers */
+  background: -moz-linear-gradient(left,  rgba(242,242,242,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(242,242,242,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(242,242,242,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(242,242,242,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(242,242,242,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(242,242,242,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+  border: 1px solid #e6e6e6;
+  transform: translate(-($pf-album-size), 0);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.pf-album--active {
+  transform: translate(0);
+}
+
+.pf-album__img-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pf-album__img {
+  position: relative;
+  left: 0;
+  -webkit-transition: all 1s;
+  transition: all 0.4s;
+  z-index: 1;
+}
+
+.pf-album__content {
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  p {
+    font-size: 0.875rem;
+  }
+}
+
+.pf-album--open {
+  .pf-album__img {
+    left: -($pf-album-size/1.5);
+    transform: rotate(-3deg);
+  }
+  .pf-album__content {
+    opacity: 1;
+  }
+}
+
+.pf-thumbs {
+  height: 100%;
+  float: right;
+}
+
+.pf-thumb {
+  height: 89px;
+  width: 89px;
+  overflow: hidden;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+  &:hover {
+    &:after {
+      opacity: 0;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.pf-thumb--active {
+  &:after {
+    top: -89px;
+  }
+}
+
+.pf-dates {
+  width: 68px;
+  float: right;
+}
+
+.pf-date {
+  height: 73.83px;
+  text-align: center;
+  font-weight: 100;
+  border-bottom: $pf-border-style;
+  padding-top: 1.2em;
+  cursor: pointer;
+  color: rgba(0,0,0,0.3);
+  &.pf-date--active {
+    height: 147.66px;
+    padding-top: 3.6em;
+    .pf-date__month {
+      color: black;
+    }
+    .pf-date__day {
+      color: $pf-brand-color;
+    }
+    &, &:hover {
+      background: white;
+    }
+  }
+  &:hover {
+    background: rgba(0,0,0,0.03);
+  }
+}
+
+.pf-date__month {
+  line-height: 1;
+  font-size: 0.75em;
+}
+
+.pf-date__day {
+  line-height: 1;
+  font-size: 1.25em;
+  font-weight: 400;
+}
