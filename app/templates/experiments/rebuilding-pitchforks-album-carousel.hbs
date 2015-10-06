@@ -1,31 +1,39 @@
-<div class="section p">
-  <h1 class="pb">Rebuilding Pitchfork's Album Carousel</h1>
-  <img src="images/experiments/rebuilding-pitchforks-album-carousel/existing_carousel.jpg" class="u-1/1" />
-  <div class="pt+">
-      <p>
-          <strong class="text-highlight">This is a nice carousel</strong> and I'm a frequent visitor to Pitchfork. Most of the time I'm looking for new songs or albums
-          I haven't heard of or keep up with music news. One of the features I use a lot is this damn carousel.
-          I've been using it for years now. I Feel like Bill Murray in Groundhog Day with this thing. Get my morning coffee, eat a banana, go to Pitchfork,
-          cycle through the albums, repeat. Like I said, it's a nice carousel but it just hasn't changed in forever, so I decided it's time
-          for me to take a crack at reinventing it.
-      </p>
-      <p>
-          First, in order to figure out what to change, I wanted to understand the requirements. Pitchfork publishes
-          5 reviews every weekday. the layout shows the current day's reviews with the first album active. the detail view
-          shows the album artwork and album info. The info contains the artist name, album name, author name and
-          an excerpt from the review. Below the detail view is thumbnails of each album. Hovering over one triggers
-          a transition, making it the active album. There are 5 tabs on the right for the last 5 days of reviews. Clicking a tab activates
-          that day replacing, the thumbnails and detail view.
-      </p>
-      <ul class="list-bare">
-          <li>width: 600px</li>
-          <li>height: 443px</li>
-      </ul>
-  </div>
-  {{#link-to 'experiments.rebuilding-pitchforks-album-carousel.demo'}}Demo{{/link-to}}
+<div class="hero hero--huge">
+    <h1 class="text-light text-center mb0">Rebuilding Pitchfork's Album Carousel</h1>
+</div>
+<div class="section p mb++">
+    <p class="pb+">
+        <strong class="text-highlight">Pitchfork is a well designed website</strong> and I am frequent visitor. One of
+        the features I use a lot is this damn carousel.
+        I've been using it for years now. I Feel like Bill Murray in Groundhog Day with this thing. Get my morning
+        coffee, eat a banana, go to Pitchfork,
+        cycle through the albums, repeat. Don't get me wrong, it's a nice carousel but it just hasn't changed in
+        forever, so I decided it's time
+        for me to take a crack at reinventing it.
+    </p>
 
-  <div class="mv+">
-    {{outlet}}
-  </div>
+    <div class="layout">
+        <div class="layout__item u-1/2">
+            <img src="images/experiments/rebuilding-pitchforks-album-carousel/existing_carousel.jpg" class="u-1/1"/>
+        </div><!--
+        --><div class="layout__item u-1/2">
+            <img src="images/experiments/rebuilding-pitchforks-album-carousel/outline.jpg" class="u-1/1"/>
+        </div>
+    </div>
+    <p>
+        First, in order to figure out what to change, I wanted to stick to the requirements. Pitchfork publishes
+        5 reviews every weekday. the layout shows the current day's reviews with the first album displayed. the detail
+        view
+        shows the album artwork and album info containing the artist name, album name, author name and
+        an excerpt. Hovering over one of the thumbnails triggers a transition, making it the active album.
+        There are 5 tabs for the last 5 days of reviews and clicking a tab activates that day's reviews.
+    </p>
 
+    <p class="pv++"><strong class="text-highlight">What I wanted to do</strong> was focus on the album art as a strong visual component
+        of an otherwise text heavy layout. I've always responded to album artwork and in this digital age we don't get to
+        see very much of it. In order to bring the art to the foreground of the component, I decided to conceal the text
+        content under the album cover that could be revealed on hover. This not only made it easier on the eyes, it
+        became alot more enjoyable to browse. Peep the demo below.
+    </p>
+  {{pitchfork-carousel content=pitchforkData}}
 </div>

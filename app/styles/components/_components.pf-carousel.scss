@@ -1,17 +1,23 @@
 $pf-carousel-width:        600px !default;
+$pf-day-width:             530px;
 $pf-carousel-height:       443px !default;
 $pf-album-size:            $pf-carousel-height !default;
 $pf-border-style:          1px solid #e6e6e6;
 $pf-brand-color:           #ef4135;
+$pf-author-color:          rgba(0,0,0,0.5);
 
+.pf-carousel-width {
+  width: $pf-carousel-width;
+}
 
 .pf-carousel {
-  width: $pf-carousel-width;
+  @extend .pf-carousel-width;
   height: $pf-carousel-height;
-  background: rgba(0,0,0,0.03);
+  background: rgba(0,0,0,0.7);
   overflow: hidden;
   position: relative;
   border: $pf-border-style;
+  margin: 0 auto;
 }
 
 .pf-album {
@@ -27,14 +33,49 @@ $pf-brand-color:           #ef4135;
   background: -ms-linear-gradient(left,  rgba(242,242,242,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
   background: linear-gradient(to right,  rgba(242,242,242,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
-  border: 1px solid #e6e6e6;
   transform: translate(-($pf-album-size), 0);
   -webkit-transition: all 0.3s;
+  opacity: 0.5;
   transition: all 0.3s;
 }
 
-.pf-album--active {
+.pf-album__artist,
+.pf-album__title {
+  font-weight: 400;
+}
+
+.pf-album__artist {
+  @extend .mb0;
+  line-height: 1;
+}
+
+.pf-album__title {
+  @extend .mt0;
+  color: $pf-brand-color;
+}
+
+.pf-author {
+  color: $pf-author-color;
+}
+
+.pf-days {
+  height: 100%;
+}
+
+.pf-day {
+  width: $pf-day-width;
+  transform: translate(0, -($pf-day-width));
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.pf-album--active,
+.pf-day--active {
   transform: translate(0);
+  opacity: 1;
 }
 
 .pf-album__img-container {
@@ -50,6 +91,8 @@ $pf-brand-color:           #ef4135;
   -webkit-transition: all 1s;
   transition: all 0.4s;
   z-index: 1;
+  height: 100%;
+  width: 100%;
 }
 
 .pf-album__content {
@@ -63,7 +106,7 @@ $pf-brand-color:           #ef4135;
 
 .pf-album--open {
   .pf-album__img {
-    left: -($pf-album-size/1.5);
+    left: -($pf-album-size/1.4);
     transform: rotate(-3deg);
   }
   .pf-album__content {
@@ -77,10 +120,11 @@ $pf-brand-color:           #ef4135;
 }
 
 .pf-thumb {
-  height: 89px;
-  width: 89px;
+  height: 83px;
+  width: 83px;
   overflow: hidden;
   position: relative;
+  margin-bottom: 6px;
   &:after {
     content: '';
     position: absolute;
@@ -97,6 +141,7 @@ $pf-brand-color:           #ef4135;
     }
   }
   img {
+    height: 100%;
     width: 100%;
   }
 }
@@ -110,6 +155,7 @@ $pf-brand-color:           #ef4135;
 .pf-dates {
   width: 68px;
   float: right;
+  background: white;
 }
 
 .pf-date {
@@ -119,6 +165,8 @@ $pf-brand-color:           #ef4135;
   border-bottom: $pf-border-style;
   padding-top: 1.2em;
   cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   color: rgba(0,0,0,0.3);
   &.pf-date--active {
     height: 147.66px;

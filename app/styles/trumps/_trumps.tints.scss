@@ -6,9 +6,10 @@
   }
 }
 
-.tint--green {
+.tint--yellow {
+  color: #105B63;
   &:after {
-    background: rgba(0,163,136,0.8);
+    background: rgba(255,250,213,0.8);
   }
 }
 

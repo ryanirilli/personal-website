@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('controller:experiments/rebuilding-pitchforks-album-carousel/demo', {
+moduleFor('controller:experiments/rebuilding-pitchforks-album-carousel', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

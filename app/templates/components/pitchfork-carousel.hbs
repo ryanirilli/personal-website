@@ -1,51 +1,49 @@
 <div class="pf-carousel">
     <div class="pf-dates">
-        <div class="pf-date pf-date--active">
-            <div class="pf-date__month">Sep</div>
-            <div class="pf-date__day">28</div>
-        </div>
-        <div class="pf-date">
-            <div class="pf-date__month">Sep</div>
-            <div class="pf-date__day">25</div>
-        </div>
-        <div class="pf-date">
-            <div class="pf-date__month">Sep</div>
-            <div class="pf-date__day">24</div>
-        </div>
-        <div class="pf-date">
-            <div class="pf-date__month">Sep</div>
-            <div class="pf-date__day">23</div>
-        </div>
-        <div class="pf-date">
-            <div class="pf-date__month">Sep</div>
-            <div class="pf-date__day">22</div>
-        </div>
+        {{#each content.days as |day index|}}
+          <div class="pf-date {{if day.isActive 'pf-date--active'}}" {{action 'setActiveDay' index}}>
+              <div class="pf-date__month">{{date-format day.date 'MMM'}}</div>
+              <div class="pf-date__day">{{date-format day.date 'D'}}</div>
+          </div>
+        {{/each}}
     </div>
-    <div class="pf-albums">
-      {{#each content.albums as |album|}}
-          <div class="pf-album {{if album.isOpen 'pf-album--open'}} {{if album.isActive 'pf-album--active'}}" {{action 'toggleCover' album on="mouseEnter"}} {{action 'toggleCover' album on="mouseLeave"}}>
-              <div class="pf-album__img-container">
-                <img class="pf-album__img u-1/1" src="{{album.imageUrl}}">
-              </div>
-              <div class="pf-album__content layout layout--rev">
-                  <div class="u-2/3">
-                      <div class="ph pl+">
-                          <h2 class="mb0">{{album.artist}}</h2>
-                          <h4 class="mt0">{{album.albumName}}</h4>
-                          <p>
-                              {{{album.description}}}
-                          </p>
+    <div class="pf-days">
+      {{#each content.days as |day|}}
+        <div class="pf-day {{if day.isActive 'pf-day--active'}}">
+            <div class="pf-albums">
+              {{#each day.albums as |album|}}
+                  <div class="pf-album {{if album.isOpen 'pf-album--open'}} {{if album.isActive 'pf-album--active'}}"
+                    {{action 'toggleCover' album on="mouseEnter"}} {{action 'toggleCover' album on="mouseLeave"}}>
+                      <div class="pf-album__img-container">
+                          <img class="pf-album__img" src="{{album.imageUrl}}">
+                      </div>
+                      <div class="pf-album__content layout layout--rev">
+                          <div class="u-2/3">
+                              <div class="ph">
+                                  <h3 class="pf-album__artist">{{album.artist}}</h3>
+                                  <h5 class="mt0 pf-album__title">{{album.albumName}}</h5>
+                                  <p class="pf-author">
+                                      By {{album.author}}
+                                  </p>
+                                  <p>
+                                    {{{album.description}}}
+                                  </p>
+                              </div>
+                          </div>
                       </div>
                   </div>
-              </div>
-          </div>
-      {{/each}}
-    </div>
-    <div class="pf-thumbs">
-        {{#each content.albums as |album|}}
-            <div class="pf-thumb {{if album.isActive 'pf-thumb--active'}}" {{action 'setActiveAlbum' album on="mouseEnter"}}>
-                <img src={{album.thumbUrl}} />
+              {{/each}}
             </div>
-        {{/each}}
+            <div class="pf-thumbs">
+              {{#each day.albums as |album|}}
+                  <div class="pf-thumb {{if album.isActive 'pf-thumb--active'}}" {{action 'setActiveAlbum' album on="mouseEnter"}}>
+                      <div class="pf-thumb__img-container">
+                          <img src={{album.thumbUrl}} />
+                      </div>
+                  </div>
+              {{/each}}
+            </div>
+        </div>
+      {{/each}}
     </div>
 </div>
