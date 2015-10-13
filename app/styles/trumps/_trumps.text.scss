@@ -20,6 +20,10 @@
   line-height: 2;
 }
 
+.text-line-height--small {
+  line-height: 1.2;
+}
+
 .text-highlight {
   position: relative;
   display: inline-block;
@@ -34,5 +38,13 @@
     width: 120%;
     height: 24%;
     z-index: -1;
+    border-radius: 10px;
+  }
+}
+
+.text-highlight--on-dark {
+  color: white;
+  &:after {
+    background: rgba(0,0,0,1);
   }
 }

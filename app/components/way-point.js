@@ -1,13 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  waypoint: null,
   onDidInsertElement: function(){
-    this.$().waypoint({
+    let waypoint = this.$().waypoint({
       offset: this.get('offset') || '60%',
       handler: (direction) => {
         this.wayPointHandler(direction);
       }
     });
+    this.set('waypoint', waypoint);
   }.on('didInsertElement'),
 
   wayPointHandler(direction) {
@@ -19,5 +21,10 @@ export default Ember.Component.extend({
     } else {
       $target.removeClass(classes);
     }
+  },
+
+  willDestroyElement() {
+    let waypoint = this.get('waypoint');
+    waypoint[0].destroy();
   }
 });

@@ -1,13 +1,13 @@
 $timeline-border-color: #333;
 $timeline-outer-circle-size: 12px !default;
-$timeline-inner-circle-size: $timeline-outer-circle-size - 2 !default;
-$timeline-outer-circle-color: $timeline-border-color !default;
-$timeline-inner-circle-color: rgba(255,255,255,0.7) !default;
+$timeline-inner-circle-size: $timeline-outer-circle-size !default;
+$timeline-outer-circle-color: white !default;
+$timeline-inner-circle-color: $timeline-border-color !default;
 $timeline-content-bg-color: rgba(0,0,0,0.02) !default;
-$timeline-content-arrow-size: 36px !default;
+$timeline-content-arrow-size: 20px !default;
 $timeline-link-color: $timeline-border-color !default;
-$timeline-item-active-content-bg-color: rgba(0,0,0,0.03) !default;
-$timeline-item-active-outer-circle-color: #333 !default;
+$timeline-item-active-content-bg-color: #E2F4FD !default;
+$timeline-item-active-outer-circle-color: white !default;
 
 .timeline {
   @extend .list-block;
@@ -58,7 +58,7 @@ $timeline-item-active-outer-circle-color: #333 !default;
   &.timeline__item--active {
     &:after {
       background: $timeline-item-active-outer-circle-color;
-      transform: scale(1.5);
+      transform: scale(6);
     }
     .timeline__content {
       background-color: $timeline-item-active-content-bg-color;

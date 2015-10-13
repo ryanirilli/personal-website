@@ -1,0 +1,25 @@
+$card-base-color: rgba(0,0,0,0.03);
+$card-border-color: rgba(0,0,0,0.1);
+$card-hover-bg-color: #3498DB;
+$card-hover-link-color: white;
+
+.card {
+  border-color: $card-border-color;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+}
+
+.card__link {
+  @extend .p-;
+  @extend .text-small;
+  @extend .text-line-height--small;
+  display: block;
+  background: $card-base-color;
+  color: $card-hover-bg-color;
+  text-decoration: none;
+  &:hover {
+    color: $card-hover-link-color;
+    background: $card-hover-bg-color;
+  }
+}

@@ -1,5 +1,7 @@
 .cover {
   background-size: cover;
+  z-index: 1;
+  position: relative;
 }
 
 .cover--fixed {
@@ -42,5 +44,17 @@
 
 .cover--forest {
   background-image: url('/images/forest.jpeg');
+  &,h1,h2,h3,h4,h5,h6,li,a,span, strong {
+    color: white;
+  }
+  .text-highlight {
+    &:after {
+      background: #333;
+    }
+  }
+}
+
+.cover--grey {
+  background: #333;
   color: white;
 }
