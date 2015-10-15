@@ -12,6 +12,8 @@
   background-position: bottom;
 }
 
+// Cover Images
+
 .cover--sf {
   background-image: url('/images/sf.jpeg');
   color: white;
@@ -44,17 +46,19 @@
 
 .cover--forest {
   background-image: url('/images/forest.jpeg');
-  &,h1,h2,h3,h4,h5,h6,li,a,span, strong {
-    color: white;
-  }
-  .text-highlight {
-    &:after {
-      background: #333;
-    }
-  }
 }
 
-.cover--grey {
-  background: #333;
-  color: white;
+.cover--forest-bridge {
+  background-image: url('/images/forest_bridge.jpeg');
+}
+
+
+.cover--bright {
+  background: #DB9E36;
+  &, .text-highlight {
+    color: white;
+  }
+  .text-highlight:after {
+    background: rgba(0,0,0,0.1);
+  }
 }

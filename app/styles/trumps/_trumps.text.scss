@@ -29,6 +29,7 @@
   display: inline-block;
   color: #333;
   left: -3%;
+  z-index: 1;
   &:after {
     content: '';
     background: yellow;

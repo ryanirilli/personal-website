@@ -1,7 +1,7 @@
-$card-base-color: rgba(0,0,0,0.03);
-$card-border-color: rgba(0,0,0,0.1);
-$card-hover-bg-color: #3498DB;
-$card-hover-link-color: white;
+$card-base-color: rgba(0,0,0,0.03) !default;
+$card-border-color: rgba(0,0,0,0.1) !default;
+$card-hover-bg-color: #3498DB !default;
+$card-hover-link-color: white !default;
 
 .card {
   border-color: $card-border-color;
