@@ -7,3 +7,16 @@
     color: $link-color--regular;
   }
 }
+
+.link--no-deco {
+  &, a {
+    text-decoration: none;
+  }
+}
+
+.link--subtle {
+  color: inherit;
+  &:hover {
+    color: $link-color--regular;
+  }
+}

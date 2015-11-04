@@ -9,6 +9,10 @@
   font-weight: 100;
 }
 
+.text-large {
+  font-size: 2.22em;
+}
+
 .text-huge {
   font-size: 3.75em;
   @include media-query(palm) {
@@ -48,4 +52,21 @@
   &:after {
     background: rgba(0,0,0,1);
   }
+}
+
+.text-color--light {
+  color: #999;
+}
+
+.text-color--lightest {
+  color: white;
+}
+
+.font--san-francisco {
+  font-family: 'San Francisco';
+}
+
+.font--san-francisco-normal {
+  font-family: 'San Francisco';
+  font-weight: 200;
 }

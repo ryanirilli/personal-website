@@ -1,9 +1,11 @@
 @import "settings/settings.inuit-layout";
 @import "settings/settings.inuit-spacing";
 @import "settings/settings.inuit-list-block";
+@import "settings/settings.inuit-font-size";
 @import "settings/settings.icons";
 @import "settings/settings.links";
 @import "settings/settings.menus";
+@import "settings/settings.san-francisco-font";
 @import "settings/settings.sections";
 @import "../../bower_components/inuit-defaults/settings.defaults";
 @import "../../bower_components/inuit-responsive-settings/settings.responsive";
@@ -24,6 +26,7 @@
 @import "objects/objects.cards";
 @import "objects/objects.covers";
 @import "objects/objects.hero";
+@import "objects/objects.icons";
 @import "objects/objects.main-menu";
 @import "objects/objects.page";
 @import "objects/objects.sections";
