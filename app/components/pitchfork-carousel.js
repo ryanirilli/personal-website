@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   selectedDayIndex: 0,
   selectedDay: function() {
     let selectedDayIndex = this.get('selectedDayIndex');
-    return this.get('content')[selectedDayIndex]
+    return this.get('content')[selectedDayIndex];
   }.property('selectedDayIndex'),
 
   onDidInsertElement: function(){

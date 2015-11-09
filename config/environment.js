@@ -20,8 +20,8 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self'",
-      'font-src': "'self'",
+      'script-src': "'self' https://www.youtube.com/iframe_api",
+      'font-src': "'self' https://applesocial.s3.amazonaws.com",
       'connect-src': "'self'",
       'img-src': "'self'",
       'style-src': "'self' 'unsafe-inline'",

@@ -1,0 +1,11 @@
+.skew-x {
+  -ms-transform: skewX(-20deg); /* IE 9 */
+  -webkit-transform: skewX(-20deg); /* Safari */
+  transform: skewX(-20deg); /* Standard syntax */
+}
+
+.skew-y {
+  -ms-transform: skewY(-10deg); /* IE 9 */
+  -webkit-transform: skewY(-10deg); /* Safari */
+  transform: skewY(-10deg); /* Standard syntax */
+}

@@ -1,3 +1,9 @@
+%cover-palm {
+  @include media-query(palm) {
+    background: #333 !important;
+  }
+}
+
 .cover {
   background-size: cover;
   z-index: 1;
@@ -16,7 +22,10 @@
 
 .cover--sf {
   background-image: url('/images/sf.jpeg');
-  color: white;
+  color: #333;
+  .border {
+    border-color: #333;
+  }
 }
 
 .cover--mbp {
@@ -42,6 +51,7 @@
 .cover--fox {
   background-image: url('/images/fox.jpeg');
   color: white;
+  @extend %cover-palm;
 }
 
 .cover--forest {
@@ -54,11 +64,25 @@
 
 
 .cover--bright {
-  background: #DB9E36;
+  background: #FF6138;
   &, .text-highlight {
     color: white;
   }
   .text-highlight:after {
     background: rgba(0,0,0,0.1);
   }
+}
+
+.cover--light {
+  background: #f9f9f9;
+  color: #999;
+}
+
+.cover--dark {
+  background: #1E1E20;
+  color: rgba(255,255,255,0.3);
+}
+
+.cover--green {
+  background: #BEDB39;
 }

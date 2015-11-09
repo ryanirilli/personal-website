@@ -5,11 +5,26 @@ $border-color--main: #ccc;
   border-width: 1px;
 }
 
+.border--v {
+  border-bottom-style: solid;
+  border-top-style: solid;
+}
+
 .border--b {
   border-bottom-color: $border-color--main;
   border-bottom-style: solid;
 }
 
+.border--t {
+  border-top-color: $border-color--main;
+  border-top-style: solid;
+}
+
 .border--dotted {
   border-style: dotted;
+}
+
+.border--white {
+  border-top-color: white;
+  border-bottom-color: white;
 }
