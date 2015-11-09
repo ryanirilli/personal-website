@@ -14,6 +14,9 @@
 @import "../../bower_components/inuit-functions/tools.functions";
 @import "../../bower_components/inuit-responsive-tools/tools.responsive";
 @import "../../bower_components/inuit-tools-widths/tools.widths";
+
+@import "../../bower_components/slick-carousel/slick/slick.scss";
+
 @import "tools/tools.arrows";
 @import "tools/tools.gradients";
 @import "tools/tools.transitions";
@@ -37,12 +40,14 @@
 @import "objects/objects.sections";
 @import "objects/objects.timeline";
 @import "components/components.pf-carousel";
+@import "components/components.slick-carousel";
 @import "components/components.you-tube";
 @import "../../bower_components/inuit-widths/trumps.widths";
 @import "../../bower_components/inuit-widths-responsive/trumps.widths-responsive";
 @import "../../bower_components/inuit-spacing/trumps.spacing";
 @import "../../bower_components/inuit-spacing-responsive/trumps.spacing-responsive";
 @import "trumps/trumps.animation";
+@import "trumps/trumps.backgrounds";
 @import "trumps/trumps.borders";
 @import "trumps/trumps.heights";
 @import "trumps/trumps.image-fx";

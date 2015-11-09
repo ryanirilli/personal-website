@@ -22,57 +22,34 @@
           QA engineers to deliver consumer and B2B products. I'm using modern tooling, design patterns and web frameworks
           to create the best user experience.
       </p>
-      <div class="link--no-deco border border--t pt- animation-opacity opacity-0">
-          {{#way-point classTarget='.animation-opacity' classes='opacity-1' offset='75%'}}
-            <a href="https://github.com/ryanirilli" target="_blank" class="link--subtle">
-                <i class="icon-github"></i> <span class="text-small">Github</span>
-            </a>
-            <a href="https://www.linkedin.com/in/ryanirilli" class="link--subtle ml">
-                <i class="icon-linkedin"></i> <span class="text-small">Linked In</span>
-            </a>
-            <a href="https://www.twitter.com/ryanirilli" class="link--subtle ml">
-                <i class="icon-twitter"></i> <span class="text-small">Twitter</span>
-            </a>
-          {{/way-point}}
+      <div class="link--no-deco border border--t pt-">
+        <a href="https://github.com/ryanirilli" target="_blank" class="link--subtle">
+            <i class="icon-github"></i> <span class="text-small">Github</span>
+        </a>
+        <a href="https://www.linkedin.com/in/ryanirilli" class="link--subtle ml">
+            <i class="icon-linkedin"></i> <span class="text-small">Linked In</span>
+        </a>
+        <a href="https://www.twitter.com/ryanirilli" class="link--subtle ml">
+            <i class="icon-twitter"></i> <span class="text-small">Twitter</span>
+        </a>
       </div>
   </div>
 </div>
-
-<div class="cover cover--light pv+ palm-pv ph">
-    <div class="section">
-        <h1 class="font--san-francisco-normal border border--b">
-            Latest Experiments
-        </h1>
-    </div>
-    <div class="section">
-        <h2>
-          Visaudio <a class="text-light text-small link--no-deco"
-                      href="http://visaudio.me" target="_blank">http://visaudio.me</a>
-        </h2>
-        <p class="u-2/3 u-1/1-palm">
-            Visaudio is a new look at your past. It explores the web audio api and uses
-            your photos from Facebook to generate neat slideshows.
-        </p>
-        <div class="pv">
-            <h2>
-                Travlr <a class="text-light text-small link--no-deco"
-                          href="http://thetravlr.com" target="_blank">http://thetravlr.com</a>
-            </h2>
-            <p class="u-2/3 u-1/1-palm">
-                Travlr is a simple to use app for creating trip itineraries. It helps people organize
-                their travel plans with an intuitive and easy to use UI.
-
-            </p>
-        </div>
-    </div>
+<div class="section">
+    <h2 class="pl+ font--san-francisco-normal">
+        Latest Experiments
+    </h2>
+</div>
+<div>
+  {{slick-carousel data=experimentsCarouselData}}
 </div>
 
 <div class="pv+ ph palm-pv0">
   <div class="section">
       <div>
-          <h1 class="font--san-francisco-normal border border--b">
+          <h2 class="font--san-francisco-normal border border--b">
               <span class="hidden-palm">Professional</span>  Experience
-          </h1>
+          </h2>
       </div>
 
       <div class="layout">

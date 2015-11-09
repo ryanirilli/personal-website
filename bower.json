@@ -19,6 +19,7 @@
     "inuit-list-block": "~0.4.2",
     "waypoints": "~4.0.0",
     "inuit-list-bare": "~0.3.0",
-    "inuit-buttons": "~0.4.2"
+    "inuit-buttons": "~0.4.2",
+    "slick-carousel": "~1.5.8"
   }
 }
