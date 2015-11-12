@@ -12,6 +12,7 @@
 .slick-carousel__arrow {
   font-size: 6rem;
   position: absolute;
+  z-index: 1;
   top: 50%;
   line-height: 0;
   cursor: pointer;

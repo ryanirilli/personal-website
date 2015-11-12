@@ -1,17 +1,24 @@
+$page-bg: #FFF;
+$page-footer-bg: #333;
+$page-footer-circle-size: 25px;
+
 .page {
-  transition: transform 0.4s, opacity 1s;
-}
-
-.page--menu-open {
-  transform: translate($main-menu-width,0);
-  opacity: 0.5;
-}
-
-.page-top-nav {
-  background: white;
-  color: black;
-  z-index: 2;
+  background: $page-bg;
 }
 
 .page__footer {
+  height: 100px;
+  background: $page-footer-bg;
+  position: relative;
+  &:after{
+    content: '';
+    width: $page-footer-circle-size;
+    height: $page-footer-circle-size;
+    border-radius: $page-footer-circle-size/2;
+    background: $page-footer-bg;
+    position: absolute;
+    left: calc(50% - #{$page-footer-circle-size}/2);
+    top: -($page-footer-circle-size/2);
+    border: $page-footer-circle-size/5 solid $page-bg;
+  }
 }

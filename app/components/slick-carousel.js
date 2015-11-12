@@ -1,27 +1,54 @@
 import Ember from 'ember';
+import Device from './../mixins/device';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(Device, {
   data: null,
-  onDidInsertElement: function(){
+  slickCarousel: null,
+  isSlickInitialized: false,
+  setupSlick: function(){
 
-    let data = this.get('data');
-    if(!data || !data.length) { return; }
+    let data = this.get('data') || [];
+    if(!data.length) { return; }
 
-    this.$('.slick-carousel').slick({
+    let slides = this.$('.slick-carousel__slide').toArray();
+    let windowHeight = Em.$(window).outerHeight();
+    let self = this;
+    slides.forEach(function(slide, i) {
+      let bgUrl = data[i].bgUrl;
+      let $slide = Em.$(slide);
+      if(bgUrl) {
+        $slide.css({
+          'background-image': `url(${bgUrl})`,
+          height: self.device !== 'palm' ? windowHeight : 'auto'
+        });
+      }
+    });
+    this.initSlick();
+  }.on('didInsertElement'),
+
+  initSlick() {
+    let slickCarousel = this.$('.slick-carousel');
+    slickCarousel.slick({
       slide: '.slick-carousel__slide',
       prevArrow: this.$('.slick-carousel__prev'),
       nextArrow: this.$('.slick-carousel__next')
     });
 
-    let slides = this.$('.slick-carousel__slide:not(.slick-cloned)').toArray();
-    let windowHeight = Em.$(window).outerHeight();
-    slides.forEach(function(slide, i) {
-      Em.$(slide).css({
-        'background-image': `url(${data[i].bgUrl})`,
-         height: windowHeight
-      })
-    })
+    this.setProperties({
+      slickCarousel: slickCarousel,
+      isSlickInitialized: true
+    });
+  },
 
+  destroySlick() {
+    let slickCarousel = this.get('slickCarousel');
+    slickCarousel.slick('destroy');
+  },
 
-  }.on('didInsertElement')
+  onDeviceChange: function(){
+    if(this.isSlickInitialized) {
+      this.destroySlick();
+      this.setupSlick();
+    }
+  }.observes('device')
 });
