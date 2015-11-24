@@ -4,12 +4,25 @@ export default Ember.Mixin.create({
   device: null,
   isRetina: false,
   retinaMq: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)",
+  resizeEvent: null,
   breakpoints: {
     palm: "screen and (max-width: 44.9375em)",
     lap: "screen and (min-width: 45em) and (max-width: 63.9375em)",
     desk: "screen and (min-width: 64em)"
   },
-  setDevice: function(){
+
+  onInit: function() {
+    this.setDevice();
+    this.set('isRetina', window.matchMedia(this.retinaMq).matches);
+
+    let resizeEvent = `resize.${Ember.generateGuid()}}`;
+    this.set('resizeEvent', resizeEvent);
+    Ember.$(window).on(resizeEvent, () => {
+      Ember.run.debounce(this, this.setDevice, 150);
+    });
+  }.on('init'),
+
+  setDevice() {
     let breakpoints = this.breakpoints;
     let self = this;
 
@@ -19,11 +32,9 @@ export default Ember.Mixin.create({
         self.set('device', device);
       }
     }
+  },
 
-    self.set('isRetina', window.matchMedia(this.retinaMq).matches);
-
-    Em.$(window).on('resize', () => {
-      Ember.run.debounce(this, this.setDevice, 150);
-    });
-  }.on('init')
+  willDestroy() {
+    Ember.$(window).off(this.get('resizeEvent'));
+  }
 });

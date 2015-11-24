@@ -1,5 +1,5 @@
 $page-bg: #FFF;
-$page-footer-bg: #333;
+$page-footer-bg: rgba(0,0,0,0.03);
 $page-footer-circle-size: 25px;
 
 .page {
@@ -10,15 +10,22 @@ $page-footer-circle-size: 25px;
   height: 100px;
   background: $page-footer-bg;
   position: relative;
-  &:after{
-    content: '';
-    width: $page-footer-circle-size;
-    height: $page-footer-circle-size;
-    border-radius: $page-footer-circle-size/2;
-    background: $page-footer-bg;
+  @extend .icon-lightbulb;
+  &:before {
     position: absolute;
     left: calc(50% - #{$page-footer-circle-size}/2);
-    top: -($page-footer-circle-size/2);
-    border: $page-footer-circle-size/5 solid $page-bg;
+    top: -($page-footer-circle-size);
+    font-family: 'icomoon';
+    background: white;
+    font-size: 2rem;
+    padding: 32px;
+    border-radius: 40px;
+    line-height: 0;
+    width: 0;
+    color: #ccc;
+    text-indent: -($page-footer-circle-size/2);
+    @include media-query(palm) {
+      display: none;
+    }
   }
 }

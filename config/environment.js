@@ -23,7 +23,7 @@ module.exports = function(environment) {
       'script-src': "'self' https://www.youtube.com/iframe_api",
       'font-src': "'self' https://applesocial.s3.amazonaws.com",
       'connect-src': "'self'",
-      'img-src': "'self'",
+      'img-src': "'self' *.pitchfork.com",
       'style-src': "'self' 'unsafe-inline'",
       'media-src': "'self'"
     }

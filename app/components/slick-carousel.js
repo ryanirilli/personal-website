@@ -11,11 +11,11 @@ export default Ember.Component.extend(Device, {
     if(!data.length) { return; }
 
     let slides = this.$('.slick-carousel__slide').toArray();
-    let windowHeight = Em.$(window).outerHeight();
+    let windowHeight = Ember.$(window).outerHeight();
     let self = this;
     slides.forEach(function(slide, i) {
       let bgUrl = data[i].bgUrl;
-      let $slide = Em.$(slide);
+      let $slide = Ember.$(slide);
       if(bgUrl) {
         $slide.css({
           'background-image': `url(${bgUrl})`,

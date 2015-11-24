@@ -15,7 +15,8 @@ export default Ember.Component.extend({
   wayPointHandler(direction) {
     let target = this.get('classTarget');
     let classes = this.get('classes');
-    let $target = this.$().closest(target);
+    let $target = target ? this.$().closest(target) : this.$();
+
     if(direction === 'down') {
       $target.addClass(classes);
     } else {

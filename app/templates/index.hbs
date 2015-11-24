@@ -1,10 +1,10 @@
-<div class="cover cover--fox cover--fixed pv++">
+<div class="pv++ gradient--blue palm-height-1/1">
     <div class="section skew-slant text-center pv++ animation-opacity">
       {{#way-point classTarget='.section' classes='opacity-0' offset='0px'}}
         <h1 class="mv0 text-large font--san-francisco">
             Ryan Irilli
         </h1>
-        <h2 class="mt0 ph palm-ph0 border border--white border--v ib font--san-francisco text-light bg-dark--1/2">
+        <h2 class="mt0 ph palm-ph0 border border--white border--v ib font--san-francisco text-light">
             UI Designer & Developer
         </h2>
       {{/way-point}}
@@ -35,12 +35,40 @@
       </div>
   </div>
 </div>
-<div class="section">
-    <h2 class="pl+ font--san-francisco-normal">
-        Latest Experiments
+
+
+<div class="section palm-pl-">
+    <h2 class="mt0 font--san-francisco-normal">
+        Experiments
     </h2>
 </div>
-<div>
+
+<div class="section pb+ palm-ph-" {{action 'goToRoute' 'experiments.rebuilding-pitchforks-album-carousel'}}>
+    <div class="info-box info-box--clickable">
+        <div class="info-box__container">
+            <div class="info-box__icon-container">
+                <div class="info-box__icon">
+                    <img src="/images/pitchfork_logo.jpg" />
+                </div>
+            </div><!--
+            --><div class="info-box__content-container">
+                <div class="info-box__content">
+                    <h2 class="info-box__title">Rebuilding Pitchfork's Album Carousel</h2>
+                    <p class="info-box__description">
+                        Exploring a new way to browse album reviews using Ember Components
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section palm-pl-">
+    <h2 class="font--san-francisco-normal">
+        Latest Projects
+    </h2>
+</div>
+<div class="palm-pv+">
   {{slick-carousel data=experimentsCarouselData}}
 </div>
 

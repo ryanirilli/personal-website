@@ -1,3 +1,48 @@
+.icon-mobile:before {
+  content: "\e000";
+}
+.icon-laptop:before {
+  content: "\e001";
+}
+.icon-desktop:before {
+  content: "\e002";
+}
+.icon-tablet:before {
+  content: "\e003";
+}
+.icon-phone:before {
+  content: "\e004";
+}
+.icon-picture:before {
+  content: "\e00f";
+}
+.icon-ribbon:before {
+  content: "\e01e";
+}
+.icon-flag:before {
+  content: "\e024";
+}
+.icon-map:before {
+  content: "\e025";
+}
+.icon-envelope:before {
+  content: "\e028";
+}
+.icon-lightbulb:before {
+  content: "\e030";
+}
+.icon-beaker:before {
+  content: "\e03c";
+}
+.icon-genius:before {
+  content: "\e046";
+}
+.icon-chat:before {
+  content: "\e049";
+}
+.icon-menu:before {
+  content: "\e120";
+}
 .icon-chevron-small-down:before {
   content: "\e900";
 }
@@ -33,8 +78,5 @@
 }
 .icon-twitter:before {
   content: "\e90b";
-}
-.icon-menu:before {
-  content: "\e120";
 }
 

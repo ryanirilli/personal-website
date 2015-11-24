@@ -15,3 +15,9 @@
     height: 50vh;
   }
 }
+
+.palm-height-1\/1 {
+  @include media-query(palm) {
+    height: 100vh;
+  }
+}

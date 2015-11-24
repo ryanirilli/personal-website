@@ -16,7 +16,7 @@ export default Ember.Component.extend({
       Ember.$.getScript('https://www.youtube.com/iframe_api', function(){
         window.onYouTubeIframeAPIReady = function() {
           self.set('isYoutubeAPILoaded', true);
-        }
+        };
       });
     }
   },

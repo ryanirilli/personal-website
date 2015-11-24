@@ -1,4 +1,4 @@
-$border-color--main: #ccc;
+$border-color--main: #ccc !default;
 
 .border {
   border-color: transparent;
@@ -25,6 +25,9 @@ $border-color--main: #ccc;
 }
 
 .border--white {
-  border-top-color: white;
-  border-bottom-color: white;
+  border-color: white;
+}
+
+.border--subtle {
+  border-color: rgba(0,0,0,0.2);
 }

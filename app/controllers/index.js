@@ -14,5 +14,11 @@ export default Ember.Controller.extend({
       url: 'http://thetravlr.com',
       description: 'Travlr is a simple to use app for creating trip itineraries. It helps people organize their travel plans with an intuitive and easy to use UI.'
     }
-  ]
+  ],
+
+  actions: {
+    goToRoute(route) {
+      this.transitionTo(route);
+    }
+  }
 });
