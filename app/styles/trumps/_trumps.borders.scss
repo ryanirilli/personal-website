@@ -31,3 +31,18 @@ $border-color--main: #ccc !default;
 .border--subtle {
   border-color: rgba(0,0,0,0.2);
 }
+
+.border--white-cloud--bottom {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    background: url('/images/clouds-border.svg');
+    background-repeat: repeat-x;
+    background-position: bottom;
+    left: 0;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,19 @@
+.home-graphic {
+  height: 75vh;
+  @include media-query(palm) {
+    height: 100vh;
+  }
+}
+
+.home-graphic__content {
+  background: url('/images/rocket.svg') no-repeat bottom;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  width: 500px;
+  height: 100%;
+  left: calc(50% - 250px);
+  @include media-query(palm) {
+    width: 100%;
+  }
+}

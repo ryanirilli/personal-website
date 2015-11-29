@@ -4,9 +4,6 @@
 
 .slick-carousel__slide {
   height: 500px;
-  @include media-query(palm) {
-    background-image: none !important;
-  }
 }
 
 .slick-carousel__arrow {
@@ -16,11 +13,13 @@
   top: 50%;
   line-height: 0;
   cursor: pointer;
+  color: white;
   @include media-query(palm) {
     font-size: 2rem;
     top: 33.3333%;
     background: rgba(0,0,0,0.09);
     line-height: 1;
+    padding: 40px 5px;
   }
 }
 
@@ -34,17 +33,17 @@
   text-align: right;
 }
 
+.slick-carousel__btn {
+  background: rgba(255,255,255, 0.3);
+  border: none;
+  color: white;
+  &:hover {
+    background: white;
+    color: #999;
+  }
+}
 
 
 .slick-carousel__content {
-  @extend .p;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&amp;1+0,0.6+100 */
-  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0.6))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.6) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.6) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.6) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.6) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#99ffffff',GradientType=0 ); /* IE6-9 */
-  border-radius: 3px;
+
 }

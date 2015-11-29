@@ -3,6 +3,16 @@
   width: 100%;
 }
 
+.relative {
+  position: relative;
+  z-index: 1;
+}
+
+.absolute {
+  position: relative;
+  z-index: 1;
+}
+
 .ib {
   display: inline-block;
 }
@@ -11,10 +21,6 @@
   margin: 0 auto;
 }
 
-.relative {
-  position: relative;
-  z-index: 1;
-}
 
 .fixed--top {
   top: 0;

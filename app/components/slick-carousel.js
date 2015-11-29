@@ -15,12 +15,16 @@ export default Ember.Component.extend(Device, {
     let self = this;
     slides.forEach(function(slide, i) {
       let bgUrl = data[i].bgUrl;
+      let classes = data[i].classes;
       let $slide = Ember.$(slide);
       if(bgUrl) {
         $slide.css({
           'background-image': `url(${bgUrl})`,
           height: self.device !== 'palm' ? windowHeight : 'auto'
         });
+      }
+      if(classes) {
+        $slide.addClass(classes);
       }
     });
     this.initSlick();

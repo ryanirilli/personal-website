@@ -1,25 +1,35 @@
 <div class="slick-carousel">
     {{#each data as |item|}}
       <div class="slick-carousel__slide cover">
-          <div class="section pt+ palm-pt0">
-              <div class="layout">
-                  <div class="layout__item u-1/2 u-1/1-palm">
+          <div class="layout layout--center">
+              <div class="layout__item u-2/3 u-4/5-palm">
+                  <div class="section">
                       <div class="ph">
                           <div class="slick-carousel__content">
-                              <h1 class="mv0 border border--b">{{item.heading}}</h1>
+                              {{#if item.headingPath}}
+                                <div class="layout layout--center">
+                                    <div class="layout__item u-2/3 u-1/1-palm">
+                                        <img src="{{item.headingPath}}" class="u-1/1 pt+" />
+                                    </div>
+                                </div>
+                              {{else}}
+                                  <h1 class="mv0 text-center pt++ palm-pt">{{item.heading}}</h1>
+                              {{/if}}
+
+
                               <p>
                                 {{item.description}}
                               </p>
-                              <a href="{{item.url}}" target="_blank" class="btn btn--primary u-1/1-palm">
-                                  Open {{item.heading}}
-                              </a>
+                              <div class="text-center pt">
+                                  <a href="{{item.url}}" target="_blank" class="btn slick-carousel__btn u-1/1-palm">
+                                      Open {{item.heading}}
+                                  </a>
+                              </div>
                           </div>
                       </div>
-
                   </div>
               </div>
           </div>
-
       </div>
     {{/each}}
     <div class="slick-carousel__arrow slick-carousel__prev icon-chevron-small-left"></div>

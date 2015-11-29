@@ -1,3 +1,9 @@
+/*------------------------------------------------------
+
+ Setttings
+
+------------------------------------------------------*/
+
 @import "settings/settings.inuit-layout";
 @import "settings/settings.inuit-spacing";
 @import "settings/settings.inuit-list-block";
@@ -11,22 +17,47 @@
 @import "settings/settings.sections";
 @import "../../bower_components/inuit-defaults/settings.defaults";
 @import "../../bower_components/inuit-responsive-settings/settings.responsive";
+
+/*------------------------------------------------------
+
+ Tools
+
+------------------------------------------------------*/
+
 @import "../../bower_components/inuit-functions/tools.functions";
 @import "../../bower_components/inuit-responsive-tools/tools.responsive";
 @import "../../bower_components/inuit-tools-widths/tools.widths";
-
-@import "../../bower_components/slick-carousel/slick/slick.scss";
-
+@import "../../bower_components/inuit-mixins/tools.mixins";
 @import "tools/tools.arrows";
 @import "tools/tools.gradients";
 @import "tools/tools.transitions";
 @import "tools/tools.vendor";
-@import "../../bower_components/inuit-mixins/tools.mixins";
+
+
+/*------------------------------------------------------
+
+ Generic
+
+------------------------------------------------------*/
+
 @import "../../bower_components/inuit-normalize/generic.normalize";
 @import "../../bower_components/inuit-box-sizing/generic.box-sizing";
+
+/*------------------------------------------------------
+
+ Base
+
+------------------------------------------------------*/
+
 @import "../../bower_components/inuit-page/base.page";
 @import "base/base.paragraphs";
-@import "base/base.links";
+
+/*------------------------------------------------------
+
+ Objects
+
+------------------------------------------------------*/
+
 @import "../../bower_components/inuit-buttons/objects.buttons";
 @import "../../bower_components/inuit-layout/objects.layout";
 @import "../../bower_components/inuit-list-block/objects.list-block";
@@ -41,9 +72,24 @@
 @import "objects/objects.page";
 @import "objects/objects.sections";
 @import "objects/objects.timeline";
+
+/*------------------------------------------------------
+
+ Components
+
+------------------------------------------------------*/
+@import "components/components.home-graphic";
 @import "components/components.pf-carousel";
+@import "../../bower_components/slick-carousel/slick/slick.scss";
 @import "components/components.slick-carousel";
 @import "components/components.you-tube";
+
+/*------------------------------------------------------
+
+ Trumps
+
+------------------------------------------------------*/
+
 @import "../../bower_components/inuit-widths/trumps.widths";
 @import "../../bower_components/inuit-widths-responsive/trumps.widths-responsive";
 @import "../../bower_components/inuit-spacing/trumps.spacing";
@@ -51,6 +97,7 @@
 @import "trumps/trumps.animation";
 @import "trumps/trumps.backgrounds";
 @import "trumps/trumps.borders";
+@import "trumps/trumps.display";
 @import "trumps/trumps.heights";
 @import "trumps/trumps.image-fx";
 @import "trumps/trumps.links";
@@ -59,4 +106,3 @@
 @import "trumps/trumps.skew";
 @import "trumps/trumps.text";
 @import "trumps/trumps.tints";
-

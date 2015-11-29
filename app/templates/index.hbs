@@ -1,20 +1,21 @@
-<div class="pv++ gradient--blue palm-height-1/1">
-    <div class="section skew-slant text-center pv++ animation-opacity">
-      {{#way-point classTarget='.section' classes='opacity-0' offset='0px'}}
-        <h1 class="mv0 text-large font--san-francisco">
-            Ryan Irilli
-        </h1>
-        <h2 class="mt0 ph palm-ph0 border border--white border--v ib font--san-francisco text-light">
-            UI Designer & Developer
-        </h2>
-      {{/way-point}}
+<div class="home-graphic gradient--blue border--white-cloud--bottom">
+    <div class="home-graphic__content"></div>
+    <div class="section skew-slant relative text-center pv++ animation-opacity">
+        {{#way-point classTarget='.section' classes='opacity-0' offset='0px'}}
+            <h1 class="mv0">
+                Ryan Irilli
+            </h1>
+            <h4 class="mt0 ph border border--white border--t ib text-light">
+                UI Design &amp; Development
+            </h4>
+        {{/way-point}}
     </div>
 </div>
 
 <div class="pv++ palm-pv">
   <div class="section ph">
       <p class="text-line-height--big">
-          <strong class="text-highlight">With 8 years industry experience</strong>
+          With 8 years industry experience
           I've spent the last four years of my life in San Francisco building web applications. From an early stage start
           up
           to a publicly traded company, I have worked side by side with designers, developers, product
@@ -22,7 +23,7 @@
           QA engineers to deliver consumer and B2B products. I'm using modern tooling, design patterns and web frameworks
           to create the best user experience.
       </p>
-      <div class="link--no-deco border border--t pt-">
+      <div class="link--no-deco pt-">
         <a href="https://github.com/ryanirilli" target="_blank" class="link--subtle">
             <i class="icon-github"></i> <span class="text-small">Github</span>
         </a>
@@ -38,19 +39,29 @@
 
 
 <div class="section palm-pl-">
-    <h2 class="mt0 font--san-francisco-normal">
-        Experiments
+    <h2 class="font--san-francisco-normal">
+        Latest Projects
     </h2>
 </div>
+<div class="palm-pv+ gradient--blue">
+  {{slick-carousel data=experimentsCarouselData}}
+</div>
 
-<div class="section pb+ palm-ph-" {{action 'goToRoute' 'experiments.rebuilding-pitchforks-album-carousel'}}>
-    <div class="info-box info-box--clickable">
-        <div class="info-box__container">
-            <div class="info-box__icon-container">
-                <div class="info-box__icon">
-                    <img src="/images/pitchfork_logo.jpg" />
-                </div>
-            </div><!--
+<div class="pv++">
+    <div class="section palm-pl-">
+        <h2 class="mt0 font--san-francisco-normal">
+            Experiments
+        </h2>
+    </div>
+
+    <div class="section palm-ph-" {{action 'goToRoute' 'experiments.rebuilding-pitchforks-album-carousel'}}>
+        <div class="info-box info-box--clickable">
+            <div class="info-box__container">
+                <div class="info-box__icon-container">
+                    <div class="info-box__icon">
+                        <img src="/images/pitchfork_logo.jpg" />
+                    </div>
+                </div><!--
             --><div class="info-box__content-container">
                 <div class="info-box__content">
                     <h2 class="info-box__title">Rebuilding Pitchfork's Album Carousel</h2>
@@ -59,20 +70,14 @@
                     </p>
                 </div>
             </div>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="section palm-pl-">
-    <h2 class="font--san-francisco-normal">
-        Latest Projects
-    </h2>
-</div>
-<div class="palm-pv+">
-  {{slick-carousel data=experimentsCarouselData}}
-</div>
 
-<div class="pv+ ph palm-pv0">
+
+<div class="pb+ ph palm-pv0">
   <div class="section">
       <div>
           <h2 class="font--san-francisco-normal border border--b">

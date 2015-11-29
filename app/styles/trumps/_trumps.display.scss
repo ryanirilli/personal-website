@@ -1,0 +1,10 @@
+.hide {
+  display: none;
+}
+
+@for $i from 1 through 20 {
+  .opacity-1\/#{$i} { opacity: 1 / $i; }
+  @include media-query(palm) {
+    .opacity-1\/#{$i}-palm { opacity: 1 / $i; }
+  }
+}

@@ -9,3 +9,9 @@
 .skew-slant {
   @include vendor(transform, skewX(-10deg) skewY(-6deg));
 }
+
+.no-skew-palm {
+  @include media-query(palm) {
+    @include vendor(transform, skewX(0deg) skewY(0deg));
+  }
+}
