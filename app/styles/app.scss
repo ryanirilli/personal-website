@@ -28,8 +28,10 @@
 @import "../../bower_components/inuit-responsive-tools/tools.responsive";
 @import "../../bower_components/inuit-tools-widths/tools.widths";
 @import "../../bower_components/inuit-mixins/tools.mixins";
+@import "tools/tools.animation";
 @import "tools/tools.arrows";
 @import "tools/tools.gradients";
+@import "tools/tools.keyframe";
 @import "tools/tools.transitions";
 @import "tools/tools.vendor";
 
@@ -62,6 +64,7 @@
 @import "../../bower_components/inuit-layout/objects.layout";
 @import "../../bower_components/inuit-list-block/objects.list-block";
 @import "../../bower_components/inuit-list-bare/objects.list-bare";
+@import "objects/objects.animations";
 @import "objects/objects.buttons";
 @import "objects/objects.cards";
 @import "objects/objects.covers";

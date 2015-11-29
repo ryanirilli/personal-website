@@ -1,0 +1,19 @@
+/*
+
+Example Usage:
+
+@include keyframe(changecolour) {
+  0% {
+    color: #000;
+  }
+
+  100% {
+    color: #FFF;
+  }
+}
+
+.change-color {
+  @include animation(0s, 1s, changecolour)
+}
+
+*/

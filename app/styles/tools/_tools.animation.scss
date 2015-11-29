@@ -1,0 +1,10 @@
+/*
+    Example usage:
+    @include animation(10s, 5s, changecolour)
+ */
+@mixin animation ($delay, $duration, $animation) {
+  @include vendor(animation-delay, $delay);
+  @include vendor(animation-duration, $duration);
+  @include vendor(animation-name, $animation);
+  @include vendor(animation-fill-mode, forwards);
+}
