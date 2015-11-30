@@ -20,10 +20,10 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' https://www.youtube.com/iframe_api",
+      'script-src': "'self' https://www.youtube.com/iframe_api api.tumblr.com",
       'font-src': "'self' https://applesocial.s3.amazonaws.com",
       'connect-src': "'self'",
-      'img-src': "'self' *.pitchfork.com",
+      'img-src': "'self' *.pitchfork.com *.tumblr.com",
       'style-src': "'self' 'unsafe-inline'",
       'media-src': "'self'"
     }
