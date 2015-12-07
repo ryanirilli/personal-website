@@ -17,8 +17,12 @@ export default Ember.Controller.extend({
   ],
 
   actions: {
-    goToRoute(route) {
-      this.transitionToRoute(route);
+    goToRoute(route, isExternal) {
+      if(isExternal) {
+        window.location = route;
+      } else {
+        this.transitionToRoute(route);
+      }
     }
   }
 });
