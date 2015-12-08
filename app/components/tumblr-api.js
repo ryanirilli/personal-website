@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  blogName: 'ryanirillidev',
+  tagged: 'design',
   tumblrData: null,
   onDidInsertElement: function(){
     Ember.$.ajax({
@@ -12,6 +14,13 @@ export default Ember.Component.extend({
       },
       success: (res, status, xhr) => {
         this.set('tumblrData', res.response);
+        Ember.run.scheduleOnce('afterRender', this, function() {
+          this.$().imagesLoaded(() => {
+            this.$().masonry({
+              itemSelector: '.layout__item'
+            });
+          });
+        });
       }
     });
   }.on('didInsertElement')

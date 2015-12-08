@@ -1,3 +1,5 @@
-<div class="tumblr-api">
-
+<div class="tumblr-api layout">
+    {{#each tumblrData.posts as |post|}}<div class="tumblr-api__post pb layout__item u-1/3">
+        <img class="u-1/1" src="{{post.photos.firstObject.alt_sizes.firstObject.url}}" />
+    </div>{{/each}}
 </div>

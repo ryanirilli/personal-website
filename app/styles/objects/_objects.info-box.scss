@@ -4,8 +4,7 @@
 }
 
 .info-box__container {
-  border: 1px solid rgba(0,0,0,0.3);
-  border-radius: 3px;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
   &:hover {
     border-color: rgba(0,0,0,0.4);
     background: rgba(0,0,0,0.008);;
@@ -45,13 +44,17 @@
 }
 
 .info-box__title {
-  @extend .mv0;
+  @extend .mt0;
+  @extend .mb-;
+  @extend .font--san-francisco-normal;
   line-height: 1.2;
 }
 
 .info-box__description {
   @extend .mv0;
-  @extend .palm-pt-
+  @extend .palm-pt-;
+  @extend .text-small;
+
 }
 
 

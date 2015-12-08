@@ -20,6 +20,8 @@
     "waypoints": "~4.0.0",
     "inuit-list-bare": "~0.3.0",
     "inuit-buttons": "~0.4.2",
-    "slick-carousel": "~1.5.8"
+    "slick-carousel": "~1.5.8",
+    "masonry": "~3.3.2",
+    "imagesloaded": "~3.2.0"
   }
 }

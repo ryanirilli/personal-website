@@ -21,6 +21,8 @@ module.exports = function(defaults) {
 
   app.import('bower_components/waypoints/lib/jquery.waypoints.min.js');
   app.import('bower_components/slick-carousel/slick/slick.js');
+  app.import('bower_components/masonry/dist/masonry.pkgd.min.js');
+  app.import('bower_components/imagesloaded/imagesloaded.pkgd.min.js');
 
 
   return app.toTree();
